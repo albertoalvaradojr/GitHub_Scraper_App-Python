@@ -2,7 +2,6 @@ import requests
 import tkinter as tk
 from tkinter import ttk, messagebox
 from ttkbootstrap import Style
-
 from bs4 import BeautifulSoup as bs
 
 #Create the main window
