@@ -59,8 +59,8 @@ def check_info():
         profile_bio = soup.find('div',{'class': 'p-note user-profile-bio mb-3 js-user-profile-bio f4'})['data-bio-text']
         profile_location = soup.find('span',{'class': 'p-label'}).decode_contents()
     except :
-        print("No username")
         pass
+        
 
     #deletes current page and adds info page 
     notebook.forget(notebook.select())
@@ -72,7 +72,7 @@ def check_info():
         note_content.insert(tk.END, "Located in: "+profile_location.strip()  + "\n")
     except:
         messagebox.showinfo(title="Error", message="Username not found.")
-        pass
+        
 
 #submit button
 submit_btn = ttk.Button(note_frame, text="Submit", command=check_info, style="scondary.TButton")
